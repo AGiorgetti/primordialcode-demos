@@ -1,0 +1,9 @@
+// look at gulp-typescript documentation to see how to use this config file.
+{
+	"compilerOptions": {
+		"target": "ES5",
+		"sourceMap": true,
+		"removeComments": true,
+		"out": "final.js"
+	}
+}
