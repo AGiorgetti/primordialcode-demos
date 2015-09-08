@@ -1,0 +1,28 @@
+/* STEP 1*/
+
+// look at the people that match a criteria
+var person = utils.filter(utils.getRecords(), function(p) {
+	return p.name === 'alessandro';	
+});
+
+
+/* STEP 2 */
+
+var people = utils.getRecords();
+
+function preprocess(people) {
+	var result = new Array();
+	for (var i = 0; i < people.length; i++) {
+		result.push({
+			id: people[i.id],
+			fullname: people.name + " " + people.surname
+		})
+	}
+	return result;
+}
+
+people = preprocess(people);
+
+var person = utils.filter(people, function (p) {
+	return p.name === 'alessandro';
+});

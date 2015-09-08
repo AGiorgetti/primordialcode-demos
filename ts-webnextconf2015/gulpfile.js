@@ -9,11 +9,12 @@ var tsOptions = {
   //typescript: typescript, // use the local copy of the compiler
   noImplicitAny: true,
   target: "ES5",
-  out: "final.js",
-  noExternalResolve: true // we provide all the file by ourselves, no <reference> is needed
+  out: null,
+  noExternalResolve: true, // we provide all the file by ourselves, no <reference> is needed
+  module: "commonjs"
 };
 
-var source = gulp.src("*.ts");
+var source = gulp.src("src/**/*.ts");
 
 gulp.task("tslint", function() {
   return source
@@ -27,10 +28,10 @@ gulp.task("build-ts", function () {
     .pipe(sourcemaps.init())
     .pipe(ts(tsOptions));
   return tsResult.js
-    .pipe(sourcemaps.write(".")) // sourcemaps will be generated on an external file
-    .pipe(gulp.dest('.'));
+    .pipe(sourcemaps.write(".", {includeContent: true})) // sourcemaps will be generated on an external file
+    .pipe(gulp.dest("."));
 });
 
 gulp.task("watch", function() {
-  gulp.watch("*.ts", ['build-ts-2']);  
+  gulp.watch("*.ts", ['build-ts']);  
 });
