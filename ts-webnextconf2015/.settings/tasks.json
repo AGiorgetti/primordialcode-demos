@@ -46,14 +46,16 @@
             //"args": ["--suppressExcessPropertyErrors"],
             "isBuildCommand": true,
             //"problemMatcher": "$msCompile",
-			"showOutput": "always"
+			"showOutput": "always",
+			"problemMatcher": "$tsc"
         },
 		{
             "taskName": "watch",
             //"args": [],
             "isBuildCommand": false,
             //"problemMatcher": "$msCompile",
-			"showOutput": "always"
+			"showOutput": "always",
+			"problemMatcher": "$tsc"
         },
 		{
 			"taskName": "tslint",

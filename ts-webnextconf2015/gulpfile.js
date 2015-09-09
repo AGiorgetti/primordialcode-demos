@@ -13,7 +13,7 @@ var tsOptions = {
   noImplicitAny: true,
   target: "ES5",
   //out: null,
-  suppressExcessPropertyErrors: true,
+  suppressExcessPropertyErrors: true, // typescript 1.6 breaking change!
   noExternalResolve: true, // we provide all the file by ourselves, no <reference> is needed
   module: "commonjs" //"AMD" // "commonjs"
 };
