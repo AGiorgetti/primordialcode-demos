@@ -5,7 +5,7 @@
 // ${fileDirname}: the current opened file's dirname
 // ${fileExtname}: the current opened file's extension
 // ${cwd}: the current working directory of the spawned process
-
+/*
 {
 	"version": "0.1.0",
 
@@ -29,10 +29,10 @@
 	// in the output.
 	"problemMatcher": "$tsc"
 }
-
+*/
 
 // Use Gulp as the task runner
-/*
+
 {
     "version": "0.1.0",
     "command": "gulp",
@@ -43,7 +43,7 @@
     "tasks": [
         {
             "taskName": "build-ts",
-            //"args": [],
+            //"args": ["--suppressExcessPropertyErrors"],
             "isBuildCommand": true,
             //"problemMatcher": "$msCompile",
 			"showOutput": "always"
@@ -65,7 +65,7 @@
 		}
     ]
 }
-*/
+
 
 // A task runner that calls the Typescript compiler (tsc) and
 // Compiles a HelloWorld.ts program

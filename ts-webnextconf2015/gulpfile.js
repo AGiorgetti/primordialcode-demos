@@ -3,17 +3,19 @@ var ts = require("gulp-typescript");
 var sourcemaps = require("gulp-sourcemaps");
 var typescript = require("typescript");
 var tslint = require("gulp-tslint");
+var path = require('path');
 
 // gulp-sourcemaps work well for a browser, it does not with vscode, for that to work use the plain command line compiler to emit source maps. 
 
 // define some compiler options
 var tsOptions = {
-  //typescript: typescript, // use the local copy of the compiler
+  typescript: typescript, // use the local copy of the compiler
   noImplicitAny: true,
   target: "ES5",
   //out: null,
+  suppressExcessPropertyErrors: true,
   noExternalResolve: true, // we provide all the file by ourselves, no <reference> is needed
-  module: "AMD" // "commonjs"
+  module: "commonjs" //"AMD" // "commonjs"
 };
 
 var source = gulp.src("src/**/*.ts");
@@ -31,7 +33,14 @@ gulp.task("build-ts", function () {
     .pipe(ts(tsOptions));
   return tsResult.js
     //.pipe(sourcemaps.write(".", {includeContent: true})) // sourcemaps will be generated on an external file
-    .pipe(sourcemaps.write(".")) // sourcemap added to the source file (works with vscode debugger)
+    //.pipe(sourcemaps.write()) // sourcemap added to the source file (does not work either works with vscode debugger)
+    .pipe(sourcemaps.write(".", { // allow VSCode debugger to work: https://github.com/ivogabe/gulp-typescript/issues/201
+      // Return relative source map root directories per file.
+      sourceRoot: function (file) {
+        var sourceFile = path.join(file.cwd, file.sourceMap.file);
+        return path.relative(path.dirname(sourceFile), file.cwd);
+      }
+    }))
     .pipe(gulp.dest("build/"));
 });
 
