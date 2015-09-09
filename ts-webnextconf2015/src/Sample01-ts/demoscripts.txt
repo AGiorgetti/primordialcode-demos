@@ -1,6 +1,6 @@
 /* STEP 1 */
 
-export function getRecords() {
+export function getRecords(): IRecord[] {
 	return [{
 		id: 1,
 		name: "alessandro",
@@ -13,8 +13,9 @@ export function getRecords() {
 }
 
 export interface IRecord {
-	id: number,
-	name: string
+	id: number;
+	name: string;
+	//[x:string]: any; // typescript 1.6 tsc --suppressExcessPropertyErrors (look in tasks.json)
 }
 
 export function filter(collection: IRecord[], predicate: (item: IRecord) => Boolean): IRecord[] {

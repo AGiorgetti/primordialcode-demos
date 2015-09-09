@@ -11,8 +11,9 @@ export function getRecords(): IRecord[] {
 }
 
 export interface IRecord {
-	id: number,
-	name: string
+	id: number;
+	name: string;
+	//[x:string]: any; // typescript 1.6 tsc --suppressExcessPropertyErrors (look in tasks.json)
 }
 
 export function filter(collection: IRecord[], predicate: (item: IRecord) => Boolean): IRecord[] {
