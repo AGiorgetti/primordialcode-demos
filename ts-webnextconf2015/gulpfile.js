@@ -13,9 +13,9 @@ var tsOptions = {
   noImplicitAny: true,
   target: "ES5",
   //out: "application.js", concat everything in a single application
-  suppressExcessPropertyErrors: true, // typescript 1.6 breaking change!
+  //suppressExcessPropertyErrors: true, // typescript 1.6 breaking change!
   noExternalResolve: true, // we provide all the file by ourselves, no <reference> is needed
-  module: "commonjs" //"AMD" // "commonjs"
+  module: "commonjs" //"AMD" // "commonjs" // values ["AMD", "commonjs", "UMD", "system"]
 };
 
 var source = gulp.src("src/**/*.ts");
