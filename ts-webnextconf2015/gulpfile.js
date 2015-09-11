@@ -18,7 +18,8 @@ var tsOptions = {
   module: "commonjs" //"AMD" // "commonjs" // values ["AMD", "commonjs", "UMD", "system"]
 };
 
-var source = gulp.src("src/**/*.ts");
+var tsFiles = "src/**/*.ts";
+var source = gulp.src(tsFiles);
 
 gulp.task("tslint", function() {
   return source
@@ -55,5 +56,5 @@ gulp.task("build-ts", function () {
 });
 
 gulp.task("watch", function() {
-  gulp.watch("*.ts", ['build-ts']);  
+  gulp.watch(tsFiles, ['build-ts']);  
 });
