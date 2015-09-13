@@ -1,8 +1,8 @@
 // declare arrays with elements of specific types
-{
-	
-let x: [string, number];
+(() => {
 
-x = ['alessandro', 1];
+	let x: [string, number];
 
-}
+	x = ['alessandro', 1];
+
+})();
