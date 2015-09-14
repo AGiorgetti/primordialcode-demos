@@ -3,8 +3,9 @@ export interface IRecord {
 	name: string;
 	surname: string;
 	
-	// TypeScript 1.6 requires strict matching between the properties of objects,
-	// we can use this syntax to allow the objects to have unknown properties
+	// TypeScript 1.6 requires strict matching between the properties of object literals,
+	// we can use this syntax to allow the objects to have unknown properties.
+	// If the target type accepts additional properties, add an indexer:
 	//[x:string]: any; // typescript 1.6 tsc --suppressExcessPropertyErrors (look in tasks.json)
 }
 

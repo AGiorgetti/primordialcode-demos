@@ -1,6 +1,6 @@
 // ES6 - arrow function
 
-// support for arrow function definition
+// support for arrow function syntax
 var f: () => boolean;
 
 f = () => {
@@ -21,4 +21,21 @@ var f3 = (...args: any[]) => {
 // woraround: use function expression
 var f4 = function() {
 	return arguments.length > 0;
+}
+
+// arrow functions in classes with correctly manage the 'this'
+class A {
+	
+	private prop1: string;
+	
+	// WARNING: what is 'this' ?
+	setTimer() {
+		window.setTimeout(function() {
+			this.prop1; // <- undefined!!
+		});
+		
+		window.setTimeout(() => {
+			this.prop1; // <- this is good!
+		})
+	}
 }
