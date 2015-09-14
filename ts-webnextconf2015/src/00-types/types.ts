@@ -29,3 +29,12 @@ enum MyFlags {
 // will result in inlined values! (it's a Development time construct)
 const enum MoreFlags { First = 1, Second = 3 };
 var firstFlag = MoreFlags.First;
+
+// casting: using <T> or the new 'as' operator
+var untyped = 1;
+var asNumber1: number = <number>untyped;
+var asNumber2: number = untyped as number;
+
+// type alias
+type address = string;
+var myAddress: address;

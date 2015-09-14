@@ -40,6 +40,7 @@ class RemoteLogger implements ILogger {
 class LoggerBase implements ILogger {
 	constructor(public name: string) { }
 
+	// methods cab be 'abstract' too
 	log(message: string): void {
 		console.log("LoggerBase");
 		console.log("[" + this.name + "] " + message);
