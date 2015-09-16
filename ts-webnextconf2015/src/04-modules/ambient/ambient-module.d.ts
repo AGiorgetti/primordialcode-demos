@@ -4,7 +4,7 @@
 
 // from the TypeScript docs:
 
-declare module "url" {
+declare module "my_url" {
     export interface Url {
         protocol?: string;
         hostname?: string;
@@ -14,7 +14,7 @@ declare module "url" {
     export function parse(urlStr: string, parseQueryString?: any, slashesDenoteHost?: any): Url;
 }
 
-declare module "path" {
+declare module "my_path" {
     export function normalize(p: string): string;
     export function join(...paths: any[]): string;
     export var sep: string;

@@ -1,4 +1,10 @@
 // TypeScript has all the basic JavaScript Types (number, string, etc...)
+
+//...
+var str1: string = "test";
+var str2 = "test"; // type inference
+//str2 = 1;
+
 // plus:
 
 // any [disable the type checking]

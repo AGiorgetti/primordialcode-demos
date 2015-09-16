@@ -18,7 +18,7 @@ var tsOptions = {
   module: "commonjs" //"AMD" // "commonjs" // values ["AMD", "commonjs", "UMD", "system"]
 };
 
-var tsFiles = "src/**/*.ts";
+var tsFiles = ["src/**/*.ts", "typings/**/*.d.ts"];
 var source = gulp.src(tsFiles);
 
 gulp.task("tslint", function() {

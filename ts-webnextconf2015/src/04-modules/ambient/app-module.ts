@@ -3,5 +3,5 @@
 // - require the module (to actually load it)
 
 ///<reference path="ambient-module.d.ts"/>
-import url = require("url");
+import url = require("my_url");
 var myUrl = url.parse("http://www.typescriptlang.org");

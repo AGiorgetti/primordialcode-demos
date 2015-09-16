@@ -1,7 +1,23 @@
-// keep in mynd our generic function definition:
+// keep in mind our generic function definition:
 //function filter<T>(collection: T[], predicate: (item: T) => Boolean): T[] {
 	//...
 //}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	
 // generics can be used in:
 
