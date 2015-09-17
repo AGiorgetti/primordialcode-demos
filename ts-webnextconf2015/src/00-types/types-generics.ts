@@ -15,4 +15,5 @@ function filter<T>(collection: T[], predicate: (item: T) => Boolean): T[] {
 
 // generic function type definition
 var myFilter: <T>(collection: T[], preficate: (item:T) => boolean) => T;
+
 myFilter = filter;

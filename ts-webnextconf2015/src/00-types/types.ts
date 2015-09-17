@@ -36,8 +36,10 @@ enum MyFlags {
 const enum MoreFlags { First = 1, Second = 3 };
 var firstFlag = MoreFlags.First;
 
-// casting: using <T> or the new 'as' operator
+// Casting
+// using <T> or the new 'as' operator
 var untyped = 1;
+
 var asNumber1: number = <number>untyped;
 var asNumber2: number = untyped as number;
 

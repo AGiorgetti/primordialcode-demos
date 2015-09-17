@@ -1,5 +1,5 @@
-// classes implements the behaviors of an entity
-// allows for:
+// classes implement the behaviors of an entity
+// they have support for:
 // - accessors (get, set) [ES5+]
 // - modifiers: public, private, protected
 // - constructor
@@ -8,7 +8,7 @@
 //
 // Classes also define Types (they have 2 sides):
 // - instance side (the properties involved in structural typing)
-// - static side  (constructor and static prps)
+// - static side  (constructor and static properties, not involved in type checking)
 	
 interface ILogger {
 	name: string;
@@ -37,14 +37,16 @@ class RemoteLogger implements ILogger {
 }	
 	
 // abstract ! (TypeScript 1.6)
-class LoggerBase implements ILogger {
+abstract class LoggerBase implements ILogger {
 	constructor(public name: string) { }
 
-	// methods cab be 'abstract' too
+	// methods can be 'abstract' too
 	log(message: string): void {
 		console.log("LoggerBase");
 		console.log("[" + this.name + "] " + message);
 	}
+
+	abstract log2(message: string): void;
 }
 
 class ConsoleLogger2 extends LoggerBase {
@@ -56,6 +58,11 @@ class ConsoleLogger2 extends LoggerBase {
 	log(message: string): void {
 		// do your job
 		console.log("ConsoleLogger2");
+		console.log("[" + this.name + "] " + message);
+	}
+
+	log2(message: string): void {
+		console.log("abstract method implementation");
 		console.log("[" + this.name + "] " + message);
 	}
 }
