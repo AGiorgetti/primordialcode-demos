@@ -1,14 +1,6 @@
-/* STEP 1*/
-
-// look at the people that match a criteria
-var person = utils.filter(utils.getRecords(), function(p) {
-	return p.name === 'alessandro';	
-});
-
-
 /* STEP 2 */
 
-var people = utils.getRecords();
+// what happes if you need to the process the data and change their shape?
 
 function preprocess(people) {
 	var result = new Array();
@@ -22,6 +14,8 @@ function preprocess(people) {
 }
 
 people = preprocess(people);
+
+// will your filtering function still work? or do you get the error at runtime ?
 
 var person = utils.filter(people, function (p) {
 	return p.name === 'alessandro';

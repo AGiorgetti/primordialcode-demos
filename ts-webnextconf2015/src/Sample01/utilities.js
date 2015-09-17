@@ -40,7 +40,7 @@ exports.getRecords = function () {
 */
 
 
-exports.filter = function filter(collection, predicate) {
+function filter(collection, predicate) {
 	var result = new Array();
 
 	for (var j = 0; j < collection.legth; j++) {
@@ -51,4 +51,5 @@ exports.filter = function filter(collection, predicate) {
 
 	return result;
 };
+exports.filter = filter;
 

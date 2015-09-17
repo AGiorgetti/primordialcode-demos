@@ -36,18 +36,6 @@ export function getRecords(callback: (records: IRecord[]) => void): void {
 	}).on("error", (error: any) => {
 		console.log(error);
 	});	
-	
-	/*
-	return [{
-		id: 1,
-		name: "alessandro",
-		surname: "giorgetti"
-	}, {
-			id: 2,
-			name: "mario",
-			surname: "rossi"
-		}];
-		*/
 }
 
 
