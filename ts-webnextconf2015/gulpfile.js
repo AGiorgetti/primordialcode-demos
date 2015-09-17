@@ -14,6 +14,7 @@ var tsOptions = {
   target: "ES5",
   //out: "application.js", concat everything in a single application
   //suppressExcessPropertyErrors: true, // typescript 1.6 breaking change!
+  experimentalAsyncFunctions: true,
   noExternalResolve: true, // we provide all the file by ourselves, no <reference> is needed
   module: "commonjs" //"AMD" // "commonjs" // values ["AMD", "commonjs", "UMD", "system"]
 };
