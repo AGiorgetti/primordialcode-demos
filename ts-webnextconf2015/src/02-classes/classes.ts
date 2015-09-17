@@ -67,4 +67,5 @@ class ConsoleLogger2 extends LoggerBase {
 	}
 }
 	
-// interface do not have get/set (accessors) -> you need to convert the name property to a getName() function if you wanna give that readonly behaviour
+// interface do not have get/set (accessors) -> you need to convert the name 
+// property to a getName() function if you wanna give that readonly behavior
