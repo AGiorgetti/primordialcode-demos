@@ -18,6 +18,7 @@ class User {
 	
 	constructor(tool: Tool) {
 		this.tool = tool;
+		
 		this.doSomething = this.tool.doSomething; // WARNING! you are messing up with the 'this'!
 	}	
 }

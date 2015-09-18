@@ -5,6 +5,7 @@
 // - constructor
 // - inheritable
 // - static properties
+// - interface implementation
 //
 // Classes also define Types (they have 2 sides):
 // - instance side (the properties involved in structural typing)
