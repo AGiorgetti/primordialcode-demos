@@ -18,24 +18,31 @@ var f3 = (...args: any[]) => {
 	return args.length > 0;
 }
 
-// woraround: use function expression
+// workaround: use function expression
 var f4 = function() {
 	return arguments.length > 0;
 }
 
-// arrow functions in classes with correctly manage the 'this'
+
+
+// managing the 'this' correctly using arrow functions in classes
 class A {
 	
-	private prop1: string;
+	constructor(public prop1: string) {}
 	
 	// WARNING: what is 'this' ?
 	setTimer() {
+		this.prop1 = "test";
+		
 		window.setTimeout(function() {
-			this.prop1; // <- undefined!!
-		});
+			console.log(this.prop1); // <- undefined!!
+		}, 500);
 		
 		window.setTimeout(() => {
-			this.prop1; // <- this is good!
-		})
+			console.log(this.prop1); // <- this is good!
+		}, 1000)
 	}
 }
+
+var instance = new A("test");
+instance.setTimer();

@@ -5,8 +5,9 @@
 
 /// <reference path="../../typings/tsd.d.ts" />
 import * as http from "http";
-import { Promise } from "es6-promise"
+//import { Promise } from "es6-promise"
 import * as server from "../Sample01-ts/server"
+import { filter } from "../Sample01-ts/utilities"
 
 server.StartHttpServer();
 
@@ -50,7 +51,15 @@ async function startup() {
 	
 	var people = await getRecords();
 	
+	// It's like writing procedural code!
+	
 	console.log(people);
+		
+	var result = filter(people, function(item){
+		return item.name === "alessandro";
+	})
+	
+	console.log(result);
 }
 
 startup();

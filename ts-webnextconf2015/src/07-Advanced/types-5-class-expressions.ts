@@ -8,5 +8,7 @@ let Point = class {
         return Math.sqrt(this.x * this.x + this.y * this.y);
     }
 };
+
 var p = new Point(3, 4);  // p has anonymous class type
+
 console.log(p.length());

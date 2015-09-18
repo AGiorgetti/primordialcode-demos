@@ -1,3 +1,5 @@
+// Beware of the 'this' when playing with 'function pointers'!!
+
 class Tool {
 	private name: string = "Hammer";
 	

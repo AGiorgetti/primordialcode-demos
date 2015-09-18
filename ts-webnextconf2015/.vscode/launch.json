@@ -247,11 +247,11 @@
 		},
 		{
 			// Name of configuration; appears in the launch configuration drop down menu.
-			"name": "07-advanced-async-await",
+			"name": "08-experimental-async-await",
 			// Type of configuration. Possible values: "node", "mono".
 			"type": "node",
 			// Workspace relative or absolute path to the program.
-			"program": "src/07-Advanced/async-await.ts",
+			"program": "src/08-experimental/async-await.ts",
 			// Automatically stop program after launch.
 			"stopOnEntry": false,
 			// Command line arguments passed to the program.

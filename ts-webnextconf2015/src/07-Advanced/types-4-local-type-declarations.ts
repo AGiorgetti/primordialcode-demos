@@ -5,6 +5,7 @@
 	
 	function myFunc(): void {
 		
+		// check this!
 		// class declaration inside a function
 		class LocalClass {
 			doSomething() : void {

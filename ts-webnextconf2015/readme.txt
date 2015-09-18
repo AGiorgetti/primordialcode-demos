@@ -1,9 +1,14 @@
 -----------------------
 Setup:
 
-tsd install
+Install node: http://www.nodejs.org
+
+Install tsd: npm install tsd -g
 
 npm install
+
+tsd install
+
 
 -----------------------
 Update definitions:

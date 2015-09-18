@@ -1,25 +1,4 @@
-// keep in mind our generic function definition:
-//function filter<T>(collection: T[], predicate: (item: T) => Boolean): T[] {
-	//...
-//}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
-// generics can be used in:
+// generics can also be used in:
 
 // interfaces
 
@@ -42,8 +21,10 @@ class Person<T> {
 	}
 }
 
-// Constraints
-// build a function that works on a specific set of types (ot types that expose specific properties)
+// constraints
+//
+// build a function that works on a specific set of types 
+// (ot types that expose specific properties)
 
 interface IPerson {
 	name: string;
