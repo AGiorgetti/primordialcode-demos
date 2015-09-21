@@ -10,31 +10,30 @@
 // prototype chain, this refers to the object the method was called on, 
 // as if the method was on the object.
 
-class Tool {
-	private name: string = "Hammer";
+class Service1 {
+	private name: string = "Service1";
 	
 	doSomething(): void {
 		// I expect 'this,name' to always have the value 'Hammer' right?
-		console.log("[" + this.name + "] Hammering. this is my call context", this);
+		console.log("[" + this.name + "] Doing a wonderful job! This is my call context:", this);
 	}
 }
 
-class User {
-	private name: string = "user";
-	
-	private tool: Tool; // let's do some composition
+class ServiceAggregator {
+	private name: string = "Aggregator";
+	private service1: Service1; // let's do some composition
 	
 	public doSomething: () => void; // and expose to the outside world the functions from our component class
 	
-	constructor(tool: Tool) {
-		this.tool = tool;
+	constructor(tool: Service1) {
+		this.service1 = tool;
 		
-		this.doSomething = this.tool.doSomething; // WARNING! you are 'messing up' with the 'this'! 
-		                                          // it will reference the User class
+		this.doSomething = this.service1.doSomething; // WARNING! you are 'messing up' with the 'this'! 
+		                                              // it will reference the ServiceAggregator class
 	}	
 }
 
-var u = new User(new Tool());
+var u = new ServiceAggregator(new Service1());
 u.doSomething();
 
 

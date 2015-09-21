@@ -6,6 +6,7 @@
 
 
 
+
 function filter<T>(collection: T[], predicate: (item: T) => boolean): T[] {
 	var result = new Array();
 

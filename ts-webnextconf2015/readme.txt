@@ -5,6 +5,8 @@ Install node: http://www.nodejs.org
 
 Install tsd: npm install tsd -g
 
+from a console prompt:
+
 npm install
 
 tsd install
@@ -13,7 +15,6 @@ tsd install
 Visual Studio Code
 
 edit the file settings.json and specify the correct absolute path for "typescript.tsdk" 
-
 
 -----------------------
 Update definitions:

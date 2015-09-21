@@ -6,7 +6,7 @@
 	function myFunc(): void {
 		
 		// check this!
-		// class declaration inside a function
+		// a class declaration inside a function
 		class LocalClass {
 			doSomething() : void {
 				console.log("LocalClass");

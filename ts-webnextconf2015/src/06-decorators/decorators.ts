@@ -65,7 +65,7 @@ class Actor {
 
 	//@log
 	saySomething(subject: string): string {
-		console.log("[" + this.name + "] I'm talking about '" + subject + "' and I am awesome on the stage!");
+		console.log("[" + this.name + "] I'm talking about '" + subject + "' and I am awesome on stage!");
 
 		return "I have my fingers crossed!";
 	}

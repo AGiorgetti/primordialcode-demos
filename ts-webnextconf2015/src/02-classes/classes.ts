@@ -48,7 +48,7 @@ class LoggerBase implements ILogger {
 		console.log("[" + this.name + "] " + message);
 	}
 
-	//abstract log2(message: string): void;
+	//abstract abstractMethod(message: string): void;
 }
 
 class ConsoleLoggerDerived extends LoggerBase {
@@ -63,7 +63,7 @@ class ConsoleLoggerDerived extends LoggerBase {
 		console.log("[" + this.name + "] " + message);
 	}
 
-	log2(message: string): void {
+	abstractMethod(message: string): void {
 		console.log("abstract method implementation");
 		console.log("[" + this.name + "] " + message);
 	}

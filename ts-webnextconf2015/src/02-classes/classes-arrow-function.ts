@@ -23,8 +23,7 @@ var f4 = function() {
 	return arguments.length > 0;
 }
 
-
-
+// WARNING: what is 'this' ?
 // managing the 'this' correctly using arrow functions in classes
 class A {
 	// classes body always behave as "use strict" was specified.
@@ -32,7 +31,7 @@ class A {
 	constructor(public prop1: string) {}
 	
 	// WARNING: what is 'this' ?
-	setTimer() {
+	delayedConsoleLog() {
 		this.prop1 = "test";
 				
 		window.setTimeout(function() {
@@ -51,4 +50,4 @@ class A {
 }
 
 var instance = new A("test");
-instance.setTimer();
+instance.delayedConsoleLog();
