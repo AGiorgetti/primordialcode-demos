@@ -15,8 +15,6 @@
 // - MethodDecorator 
 // - ParameterDecorator 
 
-var methodDecorator: MethodDecorator;
-
 import { ILogger, ConsoleLogger } from "../04-modules/LoggerModule";
 
 var logger: ILogger = new ConsoleLogger("decorator sample");
@@ -36,13 +34,15 @@ function log(
 	
 	var originalMethod = descriptor.value;
 	
-	// Do not use an arrow function here, it will interfere with the proper 'this' being passed in the originalMethod.apply() call.
+	// Do not use an arrow function here, 
+	// it will interfere with the proper 'this' being passed 
+	// in the originalMethod.apply() call.
 	descriptor.value = function(...args: any[]) {
 		
 		// log the arguments
 		logger.log("Method: '" + propertyKey + "', arguments: " + JSON.stringify(args));
 		
-		// call the original method
+		// call the original method, 'this' must be the right context!
 		var result = originalMethod.apply(this, args);
 		
 		// log the result
@@ -67,7 +67,8 @@ class Actor {
 }
 
 var a = new Actor("Alessandro");
-a.saySomething("TypeScript");
+var moreWords = a.saySomething("TypeScript");
+console.log(moreWords);
 
 
 

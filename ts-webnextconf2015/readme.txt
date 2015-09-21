@@ -9,6 +9,11 @@ npm install
 
 tsd install
 
+-----------------------
+Visual Studio Code
+
+edit the file settings.json and specify the correct absolute path for "typescript.tsdk" 
+
 
 -----------------------
 Update definitions:

@@ -1,10 +1,13 @@
 // Experimental
 
-// switch compilation to --target: ES6
+// rename this file .ts and switch compilation to --target: ES6
 // 
 // or try with some polyfills
 // npm install es6_promise
 // tsd install es6-promise
+//
+// double check the version of node on which to run this sample
+// it will not work in if some ES6 features are not supported
 
 /// <reference path="../../typings/tsd.d.ts" />
 import * as http from "http";
