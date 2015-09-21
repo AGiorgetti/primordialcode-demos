@@ -1,5 +1,15 @@
 // Beware of the 'this' when playing with 'function pointers'!!
 
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this
+// 
+// When a function is called as a method of an object, 
+// its 'this' is set to the object the method is called on.
+// 
+// The same notion holds true for methods defined somewhere on 
+// the object's prototype chain. If the method is on an object's 
+// prototype chain, this refers to the object the method was called on, 
+// as if the method was on the object.
+
 class Tool {
 	private name: string = "Hammer";
 	
@@ -19,7 +29,8 @@ class User {
 	constructor(tool: Tool) {
 		this.tool = tool;
 		
-		this.doSomething = this.tool.doSomething; // WARNING! you are messing up with the 'this'!
+		this.doSomething = this.tool.doSomething; // WARNING! you are 'messing up' with the 'this'! 
+		                                          // it will reference the User class
 	}	
 }
 

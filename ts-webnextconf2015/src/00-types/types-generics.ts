@@ -1,7 +1,12 @@
 // better code reuse with generic types!
 
 // let's change the function from 'Sample01-ts'
-function filter<T>(collection: T[], predicate: (item: T) => Boolean): T[] {
+
+
+
+
+
+function filter<T>(collection: T[], predicate: (item: T) => boolean): T[] {
 	var result = new Array();
 
 	for (var j = 0; j < collection.length; j++) {
@@ -11,7 +16,8 @@ function filter<T>(collection: T[], predicate: (item: T) => Boolean): T[] {
 	}
 
 	return result;
-}
+};
+
 
 // generic function type definition
 var myFilter: <T>(collection: T[], preficate: (item:T) => boolean) => T;

@@ -8,8 +8,8 @@
     "node/node.d.ts": {
       "commit": "52b0ea5c9719831eecf6ba7436660e30061a4b3c"
     },
-    "es6-promise/es6-promise.d.ts": {
-      "commit": "5f480287834a2615274eea31574b713e64decf17"
-    }
+    //"es6-promise/es6-promise.d.ts": {
+    //  "commit": "5f480287834a2615274eea31574b713e64decf17"
+    //}
   }
 }

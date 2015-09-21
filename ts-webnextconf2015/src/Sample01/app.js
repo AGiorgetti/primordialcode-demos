@@ -7,16 +7,38 @@ server.StartHttpServer();
 // call the external service
 
 // getRecords( callback(array) )
+
 // filter( array, selector(item) ) returns the filtered array!
 
 utils.getRecords(function (people) {
-	// console.log(people);
+	 console.log(people);
 	
+     var result = utils.filter(people, function(person) {
+		return person.name === "alessanro";
+	 });	
+	 
+	 console.log(result);
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	/*
 	var result = utils.filter(function (item) {
 		return item.name === "alessandro";
 	});
 
 	console.log(result);
+*/
 
 });
 

@@ -1,5 +1,8 @@
 // Experimental
 
+// switch compilation to --target: ES6
+// 
+// or try with some polyfills
 // npm install es6_promise
 // tsd install es6-promise
 

@@ -1,7 +1,9 @@
 // modules (external modules)
-// - have file scope! (map 1:1 with the file that define them)
+// - way to organize your code
+// - export: decide what to expose to the outside world
+// - have file scope! (map 1:1 with the files that defines them)
 // - any file containing a top-level import or export is considered a module
-// - must use the --module compiler switch [commonjs, AMD]
+// - must use the --module compiler switch [commonjs, AMD, system, ...]
 //
 // look at the documentation on how to do dynamic module loading.
 	

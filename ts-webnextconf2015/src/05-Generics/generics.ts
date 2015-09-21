@@ -16,7 +16,7 @@ class Person<T> {
 	id: T;
 	name: string
 	// ...
-	AddFatherId(id: T): void {
+	SmileTo(id: T): void {
 		// store the value
 	}
 }
@@ -30,7 +30,7 @@ interface IPerson {
 	name: string;
 }
 
-function filterPeople<T extends IPerson>(collection: T[], predicate: (item: T) => Boolean): T[] {
+function filter1<T extends IPerson>(collection: T[], predicate: (item: T) => Boolean): T[] {
 	//...
 	throw "missing implementation";
 	

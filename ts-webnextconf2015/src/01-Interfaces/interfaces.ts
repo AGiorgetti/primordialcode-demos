@@ -1,10 +1,20 @@
 // an interface defines the SHAPE of an entity
 
+// Interfaces can describe:​
+// - Objects​
+// - Functions​
+// - Arrays / Dictionaries​
+// - Hybrid Types ('things' that are both objects and functions)​
+//​
+// Interfaces support:​
+// - Inheritance​
+
+
 interface IApple {
 	id: string,
 	producer: string,
 	color: string,
-	//name?: string
+    //	name?: string
 }
 
 interface IOrange {
@@ -18,6 +28,12 @@ var apple = <IApple>{};
 var orange = <IOrange>{};
 
 // WARNING let's mess up with the fruits! (Structural Typing - Duck Typing)
+
+apple = orange;
+orange = apple;
+
+
+
 
 //apple = orange;
 //orange = apple;

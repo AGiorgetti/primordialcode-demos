@@ -4,8 +4,8 @@
 
 /// <reference path="ambient-namespance.d.ts" />
 
-var array: string[];
+var arrayToFilter: string[];
 
-var filtered = utils.filter(array, (val) => {
+var filtered = utils.filter(arrayToFilter, (val) => {
 	return true;
 });

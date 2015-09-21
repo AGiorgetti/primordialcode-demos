@@ -27,14 +27,20 @@ var f4 = function() {
 
 // managing the 'this' correctly using arrow functions in classes
 class A {
+	// classes body always behave as "use strict" was specified.
 	
 	constructor(public prop1: string) {}
 	
 	// WARNING: what is 'this' ?
 	setTimer() {
 		this.prop1 = "test";
-		
+				
 		window.setTimeout(function() {
+			
+			// inside a function the value of 'this' depends on how the function it's called
+			// non strict mode: it must be an object, if not set it's the global object
+			// strict mode: it remain whatever it was when entering the execution context: undefined or a value
+			
 			console.log(this.prop1); // <- undefined!!
 		}, 500);
 		

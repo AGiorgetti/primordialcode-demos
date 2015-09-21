@@ -4,9 +4,10 @@ namespace Logger {
 	// - way to organize your code
 	// - export: decide what to expose to the outside world
 	// - can be split in multiple files
+	//
 	// how to use:
-	// - build the whole application concatenaing all the files
-	// - reference the <script> tags in the correct order
+	// - build the whole application concatenating all the files
+	// - reference the files using <script> tags in the correct order
 	//
 	// NO DYNAMIC MODULE LOADING (Node.js / Require.js)
 	

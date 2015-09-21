@@ -1,4 +1,5 @@
 // classes implement the behaviors of an entity
+//
 // they have support for:
 // - accessors (get, set) [ES5+]
 // - modifiers: public, private, protected
@@ -38,19 +39,19 @@ class RemoteLogger implements ILogger {
 }	
 	
 // abstract ! (TypeScript 1.6)
-abstract class LoggerBase implements ILogger {
+class LoggerBase implements ILogger {
 	constructor(public name: string) { }
-
+	
 	// methods can be 'abstract' too
 	log(message: string): void {
 		console.log("LoggerBase");
 		console.log("[" + this.name + "] " + message);
 	}
 
-	abstract log2(message: string): void;
+	//abstract log2(message: string): void;
 }
 
-class ConsoleLogger2 extends LoggerBase {
+class ConsoleLoggerDerived extends LoggerBase {
 	constructor(name: string) {
 		super(name); // call base class constructor
 	}

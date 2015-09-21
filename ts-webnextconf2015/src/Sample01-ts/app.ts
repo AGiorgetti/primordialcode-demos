@@ -8,6 +8,11 @@ server.StartHttpServer();
 utils.getRecords(function(people) {
 	// do something
 	
+	var result = utils.filter(people, function(person) {
+		return person.name === "alessandro";
+	});
+	
+	console.log(result);
 	/*
 	var person = utils.filter(people, function(p) {
 		
