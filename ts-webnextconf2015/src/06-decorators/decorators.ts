@@ -1,18 +1,23 @@
 // ES7 proposal
 // https://github.com/Microsoft/TypeScript/issues/2249
+// https://github.com/wycats/javascript-decorators
 
+// Decorators make it possible to annotate and modify classes and
+// properties at design time.
+//
 // A decorator is:
 // - an expression
 // - that evaluates to a function
 // - that takes the target, name, and property descriptor as arguments
 // - and optionally returns a property descriptor to install on the target object
 
-// decorators are added to class methods (and class constructor) declaration using the '@' sign
+// decorators are added to class methods (and class constructor)
+// declaration using the '@' sign
 
 // specific types for decorators:
 // - ClassDecorator 
-// - PropertyDecorator 
 // - MethodDecorator 
+// - PropertyDecorator 
 // - ParameterDecorator 
 
 import { ILogger, ConsoleLogger } from "../04-modules/LoggerModule";
