@@ -311,6 +311,7 @@
 			"runtimeExecutable": null,
 			// Optional arguments passed to the runtime executable.
 			//"runtimeArgs": ["--nolazy"],
+			"runtimeArgs": ["--harmony"],
 			// Environment variables passed to the program.
 			"env": { },
 			// Use JavaScript source maps (if they exist).
