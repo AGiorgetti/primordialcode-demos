@@ -10,11 +10,11 @@
 // - that evaluates to a function
 // - that takes the target, name, and property descriptor as arguments
 // - and optionally returns a property descriptor to install on the target object
-
+//
 // decorators are added to class methods (and class constructor)
 // declaration using the '@' sign
-
-// specific types for decorators:
+//
+// TypeScript has 4 specific types for decorators:
 // - ClassDecorator 
 // - MethodDecorator 
 // - PropertyDecorator 

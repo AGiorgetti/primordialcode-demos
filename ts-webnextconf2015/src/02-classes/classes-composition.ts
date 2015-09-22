@@ -15,7 +15,8 @@ class Service1 {
 	
 	doSomething(): void {
 		// I expect 'this,name' to always have the value 'Hammer' right?
-		console.log("[" + this.name + "] Doing a wonderful job! This is my call context:", this);
+		console.log("[" + this.name + "] Doing a wonderful job! This is my 'this':");
+		console.log(this);
 	}
 }
 

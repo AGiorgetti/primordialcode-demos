@@ -35,22 +35,6 @@ orange = apple;
 
 
 
-//apple = orange;
-//orange = apple;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // interface can describe functions: function types (delegates in C#)
 

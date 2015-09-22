@@ -24,17 +24,18 @@ var f4 = function() {
 }
 
 // WARNING: what is 'this' ?
-// managing the 'this' correctly using arrow functions in classes
+// Use an arrow function inside a class to have 'this' reference
+// the instance of the class in a correct way.
 class A {
 	// classes body always behave as "use strict" was specified.
 	
-	constructor(public prop1: string) {}
+	constructor(public name: string) {}
 	
 	// WARNING: what is 'this' ?
 	delayedConsoleLog() {
-		this.prop1 = "test";
-				
-		window.setTimeout(function() {
+		this.name = "test";
+						
+		setTimeout(function() {
 			
 			// inside a function the value of 'this' depends on how the function it's called
 			// non strict mode: it must be an object, if not set it's the global object
@@ -43,8 +44,8 @@ class A {
 			console.log(this.prop1); // <- undefined!!
 		}, 500);
 		
-		window.setTimeout(() => {
-			console.log(this.prop1); // <- this is good!
+		setTimeout(() => {
+			console.log(this.name); // <- this is good!
 		}, 1000)
 	}
 }

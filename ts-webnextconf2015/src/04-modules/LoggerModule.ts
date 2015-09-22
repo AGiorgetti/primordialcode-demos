@@ -5,7 +5,7 @@
 // - any file containing a top-level import or export is considered a module
 // - must use the --module compiler switch [commonjs, AMD, system, ...]
 //
-// look at the documentation on how to do dynamic module loading.
+// look at the documentation on how to do dynamic load a module.
 	
 export interface ILogger {
 	name: string;
