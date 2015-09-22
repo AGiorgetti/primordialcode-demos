@@ -25,6 +25,11 @@ class ConsoleLogger implements ILogger {
 	}
 
 	log(message: string): void {
+		
+		// use 'this.' to gain access to the class' fields and functions.
+		//
+		// When a function is called as a method of an object, 
+		// its 'this' is set to the object the method is called on.
 		console.log("[" + this.name + "] " + message);
 	}
 }

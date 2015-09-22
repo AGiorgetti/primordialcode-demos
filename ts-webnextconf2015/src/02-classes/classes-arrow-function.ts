@@ -41,8 +41,15 @@ class A {
 			// non strict mode: it must be an object, if not set it's the global object
 			// strict mode: it remain whatever it was when entering the execution context: undefined or a value
 			
-			console.log(this.prop1); // <- undefined!!
+			console.log(this.name); // <- undefined!!
 		}, 500);
+		
+		
+		
+		
+		
+		
+		
 		
 		setTimeout(() => {
 			console.log(this.name); // <- this is good!
