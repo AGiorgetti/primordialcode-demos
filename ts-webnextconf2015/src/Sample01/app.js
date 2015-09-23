@@ -10,6 +10,11 @@ server.StartHttpServer();
 
 // filter( array, selector(item) ) returns the filtered array!
 
+
+
+
+
+/* remove the comments to see how it works!
 utils.getRecords(function (people) {
 	 console.log(people);
 	
@@ -18,59 +23,5 @@ utils.getRecords(function (people) {
 	 });	
 	 
 	 console.log(result);
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	/*
-	var result = utils.filter(function (item) {
-		return item.name === "alessandro";
-	});
-
-	console.log(result);
+	 });
 */
-
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// call the library
-/*
-var person = utils.filter(people, function(p) {
-	return p.name === 'alessandro';	
-});
-*/
-// the result!
-//console.log(person);

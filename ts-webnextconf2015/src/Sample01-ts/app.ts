@@ -4,19 +4,19 @@ import * as server from "./server"
 
 server.StartHttpServer(); 
 
-// call the external service
+
+
+
+
+/* remove the comments to see how it works!
 utils.getRecords(function(people) {
-	// do something
-	
-	
-	/*
 	var person = utils.filter(people, function(p) {
 		return p.name === "alessandro";
 	});
 	
 	console.log(person);
-	*/
 });
+*/
 
 
 
