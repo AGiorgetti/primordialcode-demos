@@ -11,17 +11,17 @@
 
 
 interface IApple {
-	id: string,
-	producer: string,
-	color: string,
-    //	name?: string
+	id: string;
+	producer: string;
+	color: string;
+    //	name?: string;
 }
 
 interface IOrange {
-	id: string,
-	producer: string,
-	color: string,
-	//name: string
+	id: string;
+	producer: string;
+	color: string;
+	//name: string;
 }
 
 var apple = <IApple>{};
@@ -38,13 +38,14 @@ orange = apple;
 
 // interface can describe functions: function types (delegates in C#)
 
-interface loggingFunction{
-	(message: string): void
+interface ILoggingFunction {
+	(message: string): void;
 }
 
-var log: loggingFunction = function(message: string) { 
-	console.log(message);
-}
+var log: ILoggingFunction = function(message: string) {
+    console.log(message);
+};
+
 log("log this!");
 
 // interface can describe arrays: array types / dictionaries
